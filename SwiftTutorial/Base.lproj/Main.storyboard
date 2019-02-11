@@ -45,10 +45,23 @@
                                     <constraint firstAttribute="trailing" secondItem="sK4-ZA-9nX" secondAttribute="trailing" id="zj2-kN-VCG"/>
                                 </constraints>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="teO-Dz-yLo">
+                                <rect key="frame" x="10" y="144.5" width="355" height="355"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="teO-Dz-yLo" secondAttribute="height" multiplier="1:1" id="sw7-Kz-pTn"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uyO-DB-GaM" appends="YES" id="7zE-FJ-RPH"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="teO-Dz-yLo" secondAttribute="trailing" constant="10" id="8Am-Jx-cqg"/>
+                            <constraint firstItem="teO-Dz-yLo" firstAttribute="top" secondItem="uRJ-DU-TaZ" secondAttribute="bottom" constant="8" id="Jx6-ya-uXa"/>
                             <constraint firstItem="uRJ-DU-TaZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="egB-NM-Sbo"/>
+                            <constraint firstItem="teO-Dz-yLo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kSr-w2-h9V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uRJ-DU-TaZ" secondAttribute="trailing" constant="20" id="ndG-sK-pE9"/>
                             <constraint firstItem="uRJ-DU-TaZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="q1y-Bf-fRy"/>
                         </constraints>
@@ -57,11 +70,20 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="qSo-jx-Dxt" id="IjS-om-YA1"/>
                         <outlet property="nameTextField" destination="sK4-ZA-9nX" id="zWL-zF-Q3e"/>
+                        <outlet property="photoImageView" destination="teO-Dz-yLo" id="V6j-5B-bno"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uyO-DB-GaM">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="cAN-CM-0BD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="119.1904047976012"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="320" height="320"/>
+    </resources>
 </document>
