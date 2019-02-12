@@ -55,6 +55,10 @@
                                     <outletCollection property="gestureRecognizers" destination="uyO-DB-GaM" appends="YES" id="7zE-FJ-RPH"/>
                                 </connections>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uwa-LZ-jKz" customClass="RatingControl" customModule="SwiftTutorial" customModuleProvider="target">
+                                <rect key="frame" x="16" y="507" width="200" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
