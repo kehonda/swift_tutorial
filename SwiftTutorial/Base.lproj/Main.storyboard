@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uRJ-DU-TaZ">
-                                <rect key="frame" x="20" y="40" width="335" height="96.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uRJ-DU-TaZ">
+                                <rect key="frame" x="20" y="40" width="335" height="452.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSo-jx-Dxt">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
@@ -28,44 +28,37 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sK4-ZA-9nX">
-                                        <rect key="frame" x="0.0" y="28.5" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="129" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5o-WR-bAw">
-                                        <rect key="frame" x="0.0" y="66.5" width="155" height="30"/>
+                                        <rect key="frame" x="0.0" y="54.5" width="155" height="30"/>
                                         <state key="normal" title="Set Default Label Text."/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="prX-2U-vyc"/>
                                         </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="teO-Dz-yLo">
+                                        <rect key="frame" x="0.0" y="86.5" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="teO-Dz-yLo" secondAttribute="height" multiplier="1:1" id="sw7-Kz-pTn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="uyO-DB-GaM" appends="YES" id="7zE-FJ-RPH"/>
+                                        </connections>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uwa-LZ-jKz" customClass="RatingControl" customModule="SwiftTutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="408.5" width="252" height="44"/>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="sK4-ZA-9nX" secondAttribute="trailing" id="zj2-kN-VCG"/>
-                                </constraints>
-                            </stackView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="teO-Dz-yLo">
-                                <rect key="frame" x="10" y="144.5" width="355" height="355"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="teO-Dz-yLo" secondAttribute="height" multiplier="1:1" id="sw7-Kz-pTn"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uyO-DB-GaM" appends="YES" id="7zE-FJ-RPH"/>
-                                </connections>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uwa-LZ-jKz" customClass="RatingControl" customModule="SwiftTutorial" customModuleProvider="target">
-                                <rect key="frame" x="16" y="507" width="200" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="teO-Dz-yLo" secondAttribute="trailing" constant="10" id="8Am-Jx-cqg"/>
-                            <constraint firstItem="teO-Dz-yLo" firstAttribute="top" secondItem="uRJ-DU-TaZ" secondAttribute="bottom" constant="8" id="Jx6-ya-uXa"/>
                             <constraint firstItem="uRJ-DU-TaZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="egB-NM-Sbo"/>
-                            <constraint firstItem="teO-Dz-yLo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kSr-w2-h9V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uRJ-DU-TaZ" secondAttribute="trailing" constant="20" id="ndG-sK-pE9"/>
                             <constraint firstItem="uRJ-DU-TaZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="q1y-Bf-fRy"/>
                         </constraints>
