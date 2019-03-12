@@ -10,31 +10,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uyO-DB-GaM">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="cAN-CM-0BD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="SwiftTutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uRJ-DU-TaZ">
-                                <rect key="frame" x="20" y="40" width="335" height="420.5"/>
+                                <rect key="frame" x="20" y="40" width="335" height="398"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSo-jx-Dxt">
-                                        <rect key="frame" x="124.5" y="0.0" width="86.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sK4-ZA-9nX">
-                                        <rect key="frame" x="103" y="22.5" width="129" height="30"/>
+                                        <rect key="frame" x="103" y="0.0" width="129" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="teO-Dz-yLo">
-                                        <rect key="frame" x="7.5" y="54.5" width="320" height="320"/>
+                                        <rect key="frame" x="7.5" y="32" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="teO-Dz-yLo" secondAttribute="height" multiplier="1:1" id="sw7-Kz-pTn"/>
@@ -44,7 +44,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uwa-LZ-jKz" customClass="RatingControl" customModule="SwiftTutorial" customModuleProvider="target">
-                                        <rect key="frame" x="41.5" y="376.5" width="252" height="44"/>
+                                        <rect key="frame" x="41.5" y="354" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -58,37 +58,63 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="mealNameLabel" destination="qSo-jx-Dxt" id="IjS-om-YA1"/>
                         <outlet property="nameTextField" destination="sK4-ZA-9nX" id="zWL-zF-Q3e"/>
                         <outlet property="photoImageView" destination="teO-Dz-yLo" id="V6j-5B-bno"/>
                         <outlet property="ratingControl" destination="uwa-LZ-jKz" id="cFW-lC-zjP"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="uyO-DB-GaM">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="cAN-CM-0BD"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="119.1904047976012"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Meal Table View Controller-->
         <scene sceneID="WVb-LP-U9F">
             <objects>
-                <tableViewController id="Eaj-Sq-IAh" sceneMemberID="viewController">
+                <tableViewController id="Eaj-Sq-IAh" customClass="MealTableViewController" customModule="SwiftTutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="V4d-gE-flB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bqc-9r-9eH">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="90" id="bqc-9r-9eH" customClass="MealTableViewCell" customModule="SwiftTutorial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bqc-9r-9eH" id="Slb-eZ-Y7w">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="SdI-xd-3rS">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="LkM-T9-6IZ"/>
+                                                <constraint firstAttribute="height" constant="90" id="QPW-76-8A9"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ecZ-Qt-mpm" customClass="RatingControl" customModule="SwiftTutorial" customModuleProvider="target">
+                                            <rect key="frame" x="98" y="35" width="252" height="44"/>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuP-Ui-2Yg">
+                                            <rect key="frame" x="98" y="11" width="252" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ecZ-Qt-mpm" firstAttribute="bottom" secondItem="Slb-eZ-Y7w" secondAttribute="bottomMargin" id="8Tl-zB-gMy"/>
+                                        <constraint firstItem="SdI-xd-3rS" firstAttribute="top" secondItem="Slb-eZ-Y7w" secondAttribute="top" id="Ic3-Ug-4QW"/>
+                                        <constraint firstItem="ecZ-Qt-mpm" firstAttribute="top" secondItem="yuP-Ui-2Yg" secondAttribute="bottom" constant="3" id="SEJ-bb-aTP"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ecZ-Qt-mpm" secondAttribute="trailing" constant="9" id="aj2-jh-NCG"/>
+                                        <constraint firstItem="yuP-Ui-2Yg" firstAttribute="leading" secondItem="SdI-xd-3rS" secondAttribute="trailing" constant="8" id="jff-iU-c7f"/>
+                                        <constraint firstItem="SdI-xd-3rS" firstAttribute="leading" secondItem="Slb-eZ-Y7w" secondAttribute="leading" id="nKb-iU-PV6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yuP-Ui-2Yg" secondAttribute="trailing" constant="9" id="qpj-Vx-h7h"/>
+                                        <constraint firstItem="yuP-Ui-2Yg" firstAttribute="top" secondItem="Slb-eZ-Y7w" secondAttribute="topMargin" id="t4J-Qv-KeO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="yuP-Ui-2Yg" id="gQ1-ZE-BzW"/>
+                                    <outlet property="photoImageView" destination="SdI-xd-3rS" id="9ZO-y5-pQB"/>
+                                    <outlet property="ratingControl" destination="ecZ-Qt-mpm" id="dbg-8J-EUU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -99,7 +125,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSA-I4-j4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="119"/>
+            <point key="canvasLocation" x="-751.20000000000005" y="118.29085457271366"/>
         </scene>
     </scenes>
     <resources>
