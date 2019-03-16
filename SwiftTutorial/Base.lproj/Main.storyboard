@@ -105,6 +105,9 @@
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ecZ-Qt-mpm" customClass="RatingControl" customModule="SwiftTutorial" customModuleProvider="target">
                                             <rect key="frame" x="98" y="35" width="252" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="252" id="mgH-d5-Bfg"/>
+                                            </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuP-Ui-2Yg">
                                             <rect key="frame" x="98" y="11" width="252" height="21"/>
@@ -117,11 +120,11 @@
                                         <constraint firstItem="ecZ-Qt-mpm" firstAttribute="bottom" secondItem="Slb-eZ-Y7w" secondAttribute="bottomMargin" id="8Tl-zB-gMy"/>
                                         <constraint firstItem="SdI-xd-3rS" firstAttribute="top" secondItem="Slb-eZ-Y7w" secondAttribute="top" id="Ic3-Ug-4QW"/>
                                         <constraint firstItem="ecZ-Qt-mpm" firstAttribute="top" secondItem="yuP-Ui-2Yg" secondAttribute="bottom" constant="3" id="SEJ-bb-aTP"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ecZ-Qt-mpm" secondAttribute="trailing" constant="9" id="aj2-jh-NCG"/>
                                         <constraint firstItem="yuP-Ui-2Yg" firstAttribute="leading" secondItem="SdI-xd-3rS" secondAttribute="trailing" constant="8" id="jff-iU-c7f"/>
                                         <constraint firstItem="SdI-xd-3rS" firstAttribute="leading" secondItem="Slb-eZ-Y7w" secondAttribute="leading" id="nKb-iU-PV6"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yuP-Ui-2Yg" secondAttribute="trailing" constant="9" id="qpj-Vx-h7h"/>
                                         <constraint firstItem="yuP-Ui-2Yg" firstAttribute="top" secondItem="Slb-eZ-Y7w" secondAttribute="topMargin" id="t4J-Qv-KeO"/>
+                                        <constraint firstItem="ecZ-Qt-mpm" firstAttribute="leading" secondItem="SdI-xd-3rS" secondAttribute="trailing" constant="8" id="y8a-Wn-IpE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
